@@ -285,7 +285,7 @@
     </dependency>
 
     <dependency>
-      <groupId>org.eclipse.virgo.mirrored</groupId>
+      <groupId>ognl</groupId>
       <artifactId>ognl</artifactId>
       <version>${ognl.version}</version>
       <scope>compile</scope>
