@@ -8,5 +8,5 @@ node {
   stage 'Build'
   //
 
-  sh "./install-thymeleaf-2.1.4.VIRGO.sh -l"
+  sh "./install-thymeleaf-2.1.4.VIRGO.sh"
 }
