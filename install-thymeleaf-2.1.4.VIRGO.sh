@@ -29,5 +29,5 @@ if [ ${BUILD_TYPE} == "LOCAL" ]; then
   ./mvnw install:install-file -Dfile=target/${ARTIFACT_ID}-${VERSION}.jar -DgroupId=${GROUP_ID} -DartifactId=${ARTIFACT_ID} -Dversion=${VERSION} -Dpackaging=jar
 else
   echo "CI build detected..."
-  ./mvnw install:install-file -Dfile=target/${ARTIFACT_ID}-${VERSION}.jar -DgroupId=${GROUP_ID} -DartifactId=${ARTIFACT_ID} -Dversion=${VERSION} -Dpackaging=jar -DlocalRepositoryPath=/var/maven/repository/
+  ./mvnw -Dmaven.repo.local=/var/maven/repository/ install:install-file -Dfile=target/${ARTIFACT_ID}-${VERSION}.jar -DgroupId=${GROUP_ID} -DartifactId=${ARTIFACT_ID} -Dversion=${VERSION} -Dpackaging=jar -DlocalRepositoryPath=/var/maven/repository/
 fi
